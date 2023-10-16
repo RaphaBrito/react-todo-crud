@@ -30,6 +30,10 @@ function App() {
       });
   };
 
+  const handleUpdateTodo = (todo: Todo) => {
+    // Implemente a lógica de atualização aqui
+  };
+
   const handleDeleteTodo = (todo: Todo) => {
     fetch(`http://localhost:5000/todos/${todo.id}`, {
       method: "DELETE",
