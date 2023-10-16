@@ -2,13 +2,28 @@
   "todos": [
     {
       "text": "Nova tarefa",
-      "completed": false,
+      "completed": true,
       "id": 3
     },
     {
       "text": "Lebrar de preencher a presença",
-      "completed": false,
+      "completed": true,
       "id": 4
+    },
+    {
+      "text": "Nova",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "text": "Tarefa 4",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "text": "tarefa",
+      "completed": false,
+      "id": 7
     }
   ]
 }
