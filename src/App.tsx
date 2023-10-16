@@ -7,10 +7,13 @@ function App() {
   const [newTodo, setNewTodo] = useState("");
 
   useEffect(() => {
+    getTodos();
+  }, []);
+
+  const getTodos = () =>
     fetch("http://localhost:5000/todos")
       .then((response) => response.json())
       .then((data) => setTodos(data));
-  }, []);
 
   const handleCreateTodo = () => {
     fetch("http://localhost:5000/todos", {
@@ -25,6 +28,16 @@ function App() {
         setTodos([...todos, data]);
         setNewTodo("");
       });
+  };
+
+  const handleDeleteTodo = (todo: Todo) => {
+    fetch(`http://localhost:5000/todos/${todo.id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ text: newTodo, completed: false }),
+    }).then(getTodos);
   };
 
   return (
@@ -42,8 +55,10 @@ function App() {
           <li key={todo.id}>
             <h3>{todo.text}</h3>
             <div className="item-buttons">
-              <button>{todo.completed ? "Recomeçar" : "Concluir"}</button>
-              <button>Excluir</button>
+              <button onClick={() => handleUpdateTodo(todo)}>
+                {todo.completed ? "Recomeçar" : "Concluir"}
+              </button>
+              <button onClick={() => handleDeleteTodo(todo)}>Excluir</button>
             </div>
           </li>
         ))}
