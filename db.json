@@ -3,7 +3,12 @@
     {
       "id": 1,
       "text": "Tarefa 1",
-      "completed": false
+      "completed": true
+    },
+    {
+      "text": "Tarefa 2",
+      "completed": false,
+      "id": 2
     }
   ]
 }

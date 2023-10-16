@@ -31,7 +31,13 @@ function App() {
   };
 
   const handleUpdateTodo = (todo: Todo) => {
-    // Implemente a lógica de atualização aqui
+    fetch(`http://localhost:5000/todos/${todo.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ...todo, completed: !todo.completed }),
+    }).then(getTodos);
   };
 
   const handleDeleteTodo = (todo: Todo) => {
