@@ -102,7 +102,7 @@ function App() {
       />
       <h1>Lista de Tarefas:</h1>
       <ul>
-        {todos.map((todo: Todo) => (
+        {todos?.map((todo: Todo) => (
           <li key={todo.id}>
             <h3>{todo.text}</h3>
             <button onClick={() => handleUpdateTodo(todo)}>
