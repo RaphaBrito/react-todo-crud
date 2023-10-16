@@ -1,6 +1,19 @@
 {
   "todos": [
-    { "id": 1, "text": "Tarefa 1", "completed": false },
-    { "id": 2, "text": "Tarefa 2", "completed": true }
+    {
+      "id": 1,
+      "text": "Tarefa 1",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "text": "Tarefa 2",
+      "completed": true
+    },
+    {
+      "text": "Nova tarefa",
+      "completed": false,
+      "id": 3
+    }
   ]
 }
