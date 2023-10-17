@@ -1,27 +1,23 @@
-# React + TypeScript + Vite
+# React TODO List CRUD
+## Aplicação do módulo 6 de consumo de APIs com React do TIC em Trihas do CESAR.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+A API que utilizaremos para o projeto será criada usando o json-server. Para rodar o servidor, basta ter o json-server instalado e executar o comando abaixo:
+```
+json-server --watch db.json --port 5000
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Para rodar o projeto realize um git clone, e entre no diretório do repositório com o comando:
+```
+cd react-todo-crud
+```
+
+Com tudo isso configurado rode o seguinte comando, para instalar as dependências do projeto:
+```
+npm install
+```
+E por fim basta colocar o projeto pra rodar:
+```
+npm run dev
+```
+
+Abrindo seu navegador em http://localhost:5173 você verá seu projeto rodando! 😁
