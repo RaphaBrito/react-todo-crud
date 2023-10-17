@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import { Todo } from "./types/Todo";
 import { useQuery, useQueryClient, useMutation } from "react-query";
